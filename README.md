@@ -1,57 +1,11 @@
-# finalproject
+What problem are you trying to solve?
+Who is the primary audience?
+How will the project requirements be fulfilled?
+Which addon(s) do you think you will use and for what? Explore Ember add-ons at Ember Observer.
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
 
-## Prerequisites
+After searching for seats for half hour at Leavey library, I still could not find a single empty seat. Therefore, I decide to create a web app that tell users the nearby places where they can study or work near them. The primary audience would be students and employees who would like to get work done outside their home.
 
-You will need the following things properly installed on your computer.
+To fulfill the final project requirements, I will have 4 routes: home, about page, user profile & favorite study place list, relevant articles to increase productivity. Users would be able to search for study places, create new study places that they found out, add to their favorite list, or delete from their favorite list.
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd finalproject`
-* `npm install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+For addons, I am planning to use ember-google-maps for location display and ember-bootstrap for better user experience.
