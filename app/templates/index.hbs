@@ -1,0 +1,21 @@
+<div class="display">
+  {{#link-to "create"}}
+  Add a spot
+  {{/link-to}}
+
+  {{#each model as |spot|}}
+    {{#link-to "spot" spot.id}}
+      <h4>{{spot.name}}</h4>
+    {{/link-to}}
+
+    <p>{{spot.address}}</p>
+
+    <button type="button" onclick={{action "deleteSpot" spot}}>Delete</button>
+    
+    {{#link-to "edit" spot.id}}
+      Edit
+    {{/link-to}}
+  {{/each}}
+</div>
+
+{{outlet}}

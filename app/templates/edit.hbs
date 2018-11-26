@@ -1,0 +1,23 @@
+<form onsubmit={{action "editSpot"}}>
+  <div class="">
+    <label for="name">Name: </label>
+    {{input type="text" name="name" id="name" value=model.name}}
+  </div>
+
+  <div class="">
+    <label for="address">Address: </label>
+    {{input type="text" name="address" id="address" value=model.address}}
+  </div>
+
+  <div class="">
+    <label for="hours">Operating hours: </label>
+    {{input type="text" name="hours" id="hours" value=model.hours}}
+  </div>
+
+  <div class="">
+    <label for="review">Review: </label>
+    {{textarea name="review" rows="8" cols="80" value=model.review}}
+  </div>
+
+  <button type="submit">Confirm</button>
+</form>

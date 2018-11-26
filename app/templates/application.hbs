@@ -1,5 +1,21 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<header>
+<h2>My Study Spots</h2>
+</header>
+
+<nav>
+  {{#link-to "index"}}
+  Home
+  {{/link-to}}
+
+  {{#link-to "about"}}
+  About
+  {{/link-to}}
+
+  {{#link-to "contact"}}
+  Contact
+  {{/link-to}}
+</nav>
 
 {{outlet}}
+
+<footer>&copy; 2018 Susan Zheng</footer>
