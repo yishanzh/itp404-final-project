@@ -1,17 +1,26 @@
 header {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
 }
 nav {
   text-align: center;
+  margin: 3%;
 }
 
 nav a {
   text-decoration: none;
+  text-align: center;
+  color: black;
+  padding: 1%;
 }
 
 footer {
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 100%;
@@ -22,6 +31,74 @@ body {
   font-family: Arial;
 }
 
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #4C4848;
+}
+
 .display {
   margin: 5%;
+  text-decoration: none;
+}
+
+#about {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form {
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  width: 50%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+h6 {
+  text-align: center;
+  margin: 3%;
+}
+
+
+.liked {
+  /* padding: 3%; */
+  /* float: left; */
+  margin-bottom: 1%;
+}
+
+.not-liked {
+  padding: 3%;
+  margin: 1%;
+  /* float: left; */
+}
+
+.clear {
+  clear: both;
+}
+
+#add {
+  text-align: right;
+  padding: 0% 3%;
+}
+
+.button {
+  margin-right: 1%;
+  margin-bottom: 2%;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
 }

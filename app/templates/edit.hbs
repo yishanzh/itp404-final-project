@@ -1,4 +1,4 @@
-<form onsubmit={{action "editSpot"}}>
+{{!-- <form onsubmit={{action "editSpot"}}>
   <div class="">
     <label for="name">Name: </label>
     {{input type="text" name="name" id="name" value=model.name}}
@@ -20,4 +20,48 @@
   </div>
 
   <button type="submit">Confirm</button>
-</form>
+</form> --}}
+<h6>Edit the spot</h6>
+{{#bs-form
+  class="form"
+  formLayout=formLayout
+  model=model
+  onSubmit=(action "editSpot")
+as |form|
+}}
+  {{form.element
+    controlType="input"
+    label="Name"
+    placeholder="Name"
+    property="name"
+    required=true
+  }}
+  {{form.element
+    controlType="input"
+    label="Address"
+    placeholder="Address"
+    property="address"
+    required=true
+  }}
+  {{form.element
+    controlType="input"
+    label="Operating hours"
+    property="hours"
+  }}
+  {{form.element
+    controlType="textarea"
+    label="Review"
+    property="review"
+  }}
+  {{!-- {{bs-button
+    defaultText="Save"
+    type="dark"
+    outline="true"
+    class="button"
+    buttonType="submit"}} --}}
+  <AsyncButton
+    @defaultText="Save"
+    @pendingText="Saving..."
+    @onClick={{action "editSpot"}}
+  />
+{{/bs-form}}

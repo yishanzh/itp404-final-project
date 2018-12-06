@@ -1,0 +1,19 @@
+{{#if @liked}}
+  {{#bs-button
+    type="default"
+    outline=false
+    class="button"
+    onClick=(action "like")
+  }}
+    ♥
+  {{/bs-button}}
+{{else}}
+  {{#bs-button
+    type="default"
+    outline=false
+    class="button"
+    onClick=(action "like")
+  }}
+    ♡
+  {{/bs-button}}
+{{/if}}

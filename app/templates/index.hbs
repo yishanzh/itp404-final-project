@@ -1,21 +1,29 @@
 <div class="display">
-  {{#link-to "create"}}
-  Add a spot
-  {{/link-to}}
-
-  {{#each model as |spot|}}
-    {{#link-to "spot" spot.id}}
-      <h4>{{spot.name}}</h4>
+  <div id="add">
+    {{#link-to "create" class="btn btn-dark button"}}
+      Add a spot
     {{/link-to}}
+  </div>
 
-    <p>{{spot.address}}</p>
+  <div class="liked">
+    <h4>My Favorite:</h4>
+    {{#each model as |spot|}}
+      {{#if spot.liked}}
+        <hr>
+        <DisplayLiked @spot={{spot}}/>
+      {{/if}}
+    {{/each}}
+  </div>
 
-    <button type="button" onclick={{action "deleteSpot" spot}}>Delete</button>
-    
-    {{#link-to "edit" spot.id}}
-      Edit
-    {{/link-to}}
-  {{/each}}
+  <div class="un-liked">
+    <h4>Spot List:</h4>
+    {{#each model as |spot|}}
+      {{#unless spot.liked}}
+        <hr>
+        <DisplayLiked @spot={{spot}}/>
+      {{/unless}}
+    {{/each}}
+  </div>
 </div>
 
 {{outlet}}

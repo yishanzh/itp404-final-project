@@ -2,8 +2,8 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   actions: {
-    createSpot(event){
-      event.preventDefault();
+    createSpot(){
+      // event.preventDefault();
 
       let spot = this.store.createRecord('spot', {
         name: this.name,
@@ -15,6 +15,7 @@ export default Controller.extend({
       spot.save().then(() => {
         this.transitionToRoute('spot', spot.id);
       });
+      // console.log(spot);
     }
   }
 });

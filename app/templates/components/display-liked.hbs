@@ -1,0 +1,31 @@
+{{#link-to "spot" spot.id}}
+  <h5 data-test="spot">{{spot.name}}</h5>
+{{/link-to}}
+
+<p>{{spot.address}}</p>
+
+<button
+  class="button hidden"
+  data-test="delete-spot"
+  type="light"
+  onclick={{action "deleteSpot" spot}}
+>
+  Delete
+</button>
+{{#bs-button
+  data-test="delete-spot"
+  type="light"
+  class="button"
+  onClick=(action "deleteSpot" spot)
+}}
+  Delete
+{{/bs-button}}
+
+{{#link-to "edit" spot.id class="btn btn-light button"}}
+  Edit
+{{/link-to}}
+
+<HeartButton
+  @liked={{spot.liked}}
+  onClick={{action "like" spot}}
+/>
