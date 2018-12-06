@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/yishanzh/itp404-final-project.svg?branch=master)](https://travis-ci.org/yishanzh/itp404-final-project)
+
 What problem are you trying to solve?
 Who is the primary audience?
 How will the project requirements be fulfilled?
@@ -8,4 +10,4 @@ After searching for seats for half hour at Leavey library, I still could not fin
 
 To fulfill the final project requirements, I will have 4 routes: home, about page, user profile & favorite study place list, relevant articles to increase productivity. Users would be able to search for study places, create new study places that they found out, add to their favorite list, or delete from their favorite list.
 
-For addons, I am planning to use ember-google-maps for location display and ember-bootstrap for better user experience.
+For addons, I am planning to used ember-bootstrap for better user experience.
