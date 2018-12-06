@@ -2,8 +2,8 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   actions: {
-    createSpot(){
-      // event.preventDefault();
+    createSpot(event){
+      event.preventDefault();
 
       let spot = this.store.createRecord('spot', {
         name: this.name,

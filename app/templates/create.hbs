@@ -38,6 +38,7 @@ as |form|
     }}
   </div>
   <AsyncButton
+    data-test="add"
     @defaultText="Add"
     @pendingText="Adding..."
     @onClick={{action "createSpot"}}
@@ -46,7 +47,7 @@ as |form|
 
 
 {{!-- for testing purpose --}}
-<form
+{{!-- <form
   class="form hidden"
   formLayout="formLayout"
   onsubmit={{action "createSpot"}}
@@ -104,4 +105,4 @@ as |form|
     Add
   </button>
 
-</form>
+</form> --}}

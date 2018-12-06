@@ -10,7 +10,7 @@
     {{#each model as |spot|}}
       {{#if spot.liked}}
         <hr>
-        <DisplayLiked @spot={{spot}}/>
+        <DisplayLiked data-test="liked-spot" @spot={{spot}}/>
       {{/if}}
     {{/each}}
   </div>
@@ -20,7 +20,7 @@
     {{#each model as |spot|}}
       {{#unless spot.liked}}
         <hr>
-        <DisplayLiked @spot={{spot}}/>
+        <DisplayLiked data-test="unliked-spot" @spot={{spot}}/>
       {{/unless}}
     {{/each}}
   </div>
