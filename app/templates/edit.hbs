@@ -29,30 +29,38 @@
   onSubmit=(action "editSpot")
 as |form|
 }}
-  {{form.element
-    controlType="input"
-    label="Name"
-    placeholder="Name"
-    property="name"
-    required=true
-  }}
-  {{form.element
-    controlType="input"
-    label="Address"
-    placeholder="Address"
-    property="address"
-    required=true
-  }}
-  {{form.element
-    controlType="input"
-    label="Operating hours"
-    property="hours"
-  }}
-  {{form.element
-    controlType="textarea"
-    label="Review"
-    property="review"
-  }}
+  <div data-test="name">
+    {{form.element
+      controlType="input"
+      label="Name"
+      placeholder="Name"
+      property="name"
+      required=true
+    }}
+  </div>
+  <div data-test="address">
+    {{form.element
+      controlType="input"
+      label="Address"
+      placeholder="Address"
+      property="address"
+      required=true
+    }}
+  </div>
+  <div data-test="hours">
+    {{form.element
+      controlType="input"
+      label="Operating hours"
+      property="hours"
+    }}
+  </div>
+  <div data-test="review">
+    {{form.element
+      controlType="textarea"
+      label="Review"
+      property="review"
+    }}
+  </div>
   {{!-- {{bs-button
     defaultText="Save"
     type="dark"
@@ -60,8 +68,8 @@ as |form|
     class="button"
     buttonType="submit"}} --}}
   <AsyncButton
+    data-test="save"
     @defaultText="Save"
     @pendingText="Saving..."
-    @onClick={{action "editSpot"}}
   />
 {{/bs-form}}

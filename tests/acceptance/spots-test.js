@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { visit, currentURL, click, fillIn, pauseTest } from '@ember/test-helpers';
+import { visit, currentURL, click, fillIn } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 // import window from 'ember-window-mock';
@@ -37,22 +37,35 @@ module('Acceptance | spots', function(hooks) {
     // await fillIn('#name', 'Cafe Mak');
     await fillIn('[data-test="name"] input', 'Cafe Mak');
     // await fillIn('#address', '612 Shatto Pl');
-    await fillIn('[data-test="hours"] input', '612 Shatto Pl');
+    await fillIn('[data-test="address"] input','612 Shatto Pl' );
     // await fillIn('#hours', 'Monday to Sunday, 10 am to 1 am');
     await fillIn('[data-test="hours"] input', 'Monday to Sunday, 10 am to 1 am');
     // await fillIn('#review', 'Great place to grind for exams. It opens late');
     await fillIn('[data-test="review"] textarea', 'Great place to grind for exams. It opens late');
 
 
-    await click('[data-test="add"]');
-    await pauseTest();
+    await click('[data-test="add"] button');
 
-    assert.equal(currentURL(), '/');
+    assert.equal(currentURL(), '/spots/1');
     // assert.dom('[data-test="unliked-spot"]').exists({ count: 1 });
     assert.dom('[data-test="spot-name"]').hasText('Cafe Mak');
     assert.dom('[data-test="spot-address"]').hasText('Address: 612 Shatto Pl');
-    assert.dom('[data-test="spot-hour"]').hasText('Operating hours: Monday to Sunday, 10 am to 1am');
-    assert.dom('[data-test="spot-review"]').hasText('Review: Great place to grnd for exams. It opens late');
+    assert.dom('[data-test="spot-hour"]').hasText('Operating hours: Monday to Sunday, 10 am to 1 am');
+    assert.dom('[data-test="spot-review"]').hasText('Review: Great place to grind for exams. It opens late');
+  });
+
+  test('edit a spot', async function(assert){
+    server.loadFixtures('spots');
+    await visit('/spots/1/edit');
+
+    // await click('[data-test="edit"] a');
+
+    await fillIn('[data-test="hours"] input', 'Monday to Sunday, 10 am to 1 am');
+    await click('[data-test="save"] button');
+
+    assert.equal(currentURL(), '/spots/1');
+
+    assert.dom('[data-test="spot-hour"]').hasText('Operating hours: Monday to Sunday, 10 am to 1 am');
   });
 
 //delete test not working
