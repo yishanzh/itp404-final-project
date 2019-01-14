@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/yishanzh/itp404-final-project.svg?branch=master)](https://travis-ci.org/yishanzh/itp404-final-project)
 
 
-
+Built with Ember.js
 
 After searching for seats for half hour at Leavey library, I still could not find a single empty seat. Therefore, I decide to create a web app that tell users the nearby places where they can study or work near them. The primary audience would be students and employees who would like to get work done outside their home.
 
